@@ -1,7 +1,7 @@
 package com.douglas.budgeting;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.springframework.ai.openai.OpenAiAudioSpeechModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,7 +12,7 @@ import java.nio.file.Files;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@EnabledIfEnvironmentVariable(named = "OPENAI_API_KEY", matches = ".+")
+@Disabled("Teste depende de créditos disponíveis na API OpenAI")
 public class OpenAiSpeechModelIT {
     @Autowired
     OpenAiAudioSpeechModel openAiSpeechModel;
